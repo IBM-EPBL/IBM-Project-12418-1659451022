@@ -1,0 +1,9 @@
+﻿Name,Quantity,Component
+"U1",1," Arduino Uno R3"
+"R1",1,"1 kΩ Resistor"
+"ULCD",1," LCD 16 x 2"
+"R2",1,"1000 Ω Resistor"
+"U2",1," Temperature Sensor [TMP36]"
+"SEN1",1," Soil Moisture Sensor"
+"MMOTOR, MSPRINKLER, MSPRAYER",3," DC Motor"
+"Rpot1",1,"300 kΩ Potentiometer"

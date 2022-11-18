@@ -1,0 +1,35 @@
+import wiotp.sdk.device
+import time
+import os
+import datetime
+import random
+myConfig = { 
+"identity" : {
+"orgId" : "ov8tb8",
+"typeId" : "NodeMCU",
+"deviceId" : "12345"},
+"auth" : {
+"token" : "POPR-FeaLv5TMLGp0I"}
+}
+client = wiotp.sdk.device.DeviceClient(config = myConfig,logHandlers = None)
+client.connect()
+def myCommandCallback(cmd):
+	print("Message received"%cmd.data['command'])
+	m=cmd.data['command']
+	if(m=="motoron"):
+		print("on")
+	elif(m=="motoroff"):
+		print("off")
+	print(" ")
+while True:
+	soil = random.randint(0,100)
+	temp = random.randint(-20,125)
+	hum = random.ran dint(0,100)
+	client.publishEvent(eventId ="status",msfFormat = "json",data = myData,qos =0)
+	print(myData)
+	time.sleep(2)
+	client.commandCallback = myCommandCallback
+client.disconnect()
+	
+
+                   
